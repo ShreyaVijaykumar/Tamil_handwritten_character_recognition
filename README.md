@@ -70,8 +70,3 @@ The notebook creates an `outputs/` folder (trained weights, cached image arrays,
 
 ## Reproducibility
 Seed 42 is set for Python, NumPy and PyTorch. The validation split uses `GroupShuffleSplit(random_state=42)` over writers and is saved in the two CSV files. The reported run used Python 3.11, torch 2.14.1, torchvision 0.29.1, numpy 2.4.6, pandas 3.1.1 and scikit-learn 1.9.1. GPU training is not bit-for-bit deterministic, so a re-run may differ slightly.
-
-## Academic integrity
-- **AI assistance:** Claude (Anthropic) was used to help write the code and the report draft. All experiments were run and checked by the author.
-- **Prior work consulted:** Vijayaraghavan and Sra, "Handwritten Tamil Recognition using a Convolutional Neural Network"; the uTHCD benchmark paper; Ramakrishnan and Sundaram on confused online Tamil characters. ResNet-18 ImageNet weights are from torchvision.
-- **Dataset:** HP Labs India, Isolated Handwritten Tamil Character Dataset (IWFHR 2006).
