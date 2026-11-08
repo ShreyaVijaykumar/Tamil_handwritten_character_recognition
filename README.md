@@ -36,6 +36,25 @@ Validation accuracy (8,481 images, used for model selection): CNN 92.89, CNN + a
 
 Errors are concentrated in parallel rows of classes (76-80, 122-126, 127-131) and in the pair 8 / 32. The analysis is in the report.
 
+## Figures
+All figures are for the final ResNet-18 model and are stored in `report_figs/`.
+
+**Learning curves** (validation loss is lower than training loss because training loss includes label smoothing and augmentation):
+
+![Learning curves](report_figs/fig1_learning_curves.png)
+
+**Test confusion matrix** (156 classes, log scale):
+
+![Test confusion matrix](report_figs/fig2_confusion_matrix.png)
+
+**Real samples of the three most-confused pairs** (8/32, 79/125, 80/126; two rows per pair, one row per class):
+
+![Most-confused pairs](report_figs/fig3_confused_pairs_samples.png)
+
+**Misclassified test images** (true class, predicted class, and how often that pair occurs):
+
+![Misclassified test images](report_figs/fig4_misclassified.png)
+
 ## Files
 - `RA2311026050034_PS39.ipynb` - the full pipeline with outputs: data loading, class counts, sample images, splits, training, evaluation, error analysis, CGER and report figures.
 - `train_split.csv`, `validation_split.csv` - the fixed writer-disjoint splits. The `path` column holds paths from the author's machine; the notebook regenerates them when run.
